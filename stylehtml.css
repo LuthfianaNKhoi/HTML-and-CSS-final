@@ -1,0 +1,602 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    padding-top: 80px;
+    overflow-x: hidden;
+    background-color: wheat;
+    color: black;
+}
+
+header{
+    margin-top: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 8%;
+    background-color: rgb(231, 203, 149);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+header img{
+    width: 30px;
+    height: 30px;
+}
+
+header h2{
+    margin-left: 10px;
+    font-size: 28px;
+    font-weight: 800;
+    color: peru;
+}
+
+header a img,
+header h2{
+    display: inline-block;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+}
+
+nav ul li a.active,
+nav ul li a:hover{
+    color: white;
+    font-weight: 700;
+}
+
+/* HERO SECTION */
+.hero {
+    padding: 60px 10%;
+    color: black;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+}
+
+/* TEXT AREA */
+.hero-text span {
+    font-size: 1.2rem;
+    color: peru; /* biru seperti contoh */
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.hero-text h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 10px 0 20px;
+    color: peru;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    text-align: justify;
+    line-height: 1.7;
+    max-width: 550px;
+}
+
+
+/* IMAGE */
+.hero-img img {
+    width: 320px;
+    height: auto;
+    filter: drop-shadow(0 0 12px peru);
+}
+
+/* ABOUT SECTION */
+.about {
+    padding: 30vh;
+    color: black;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.about > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10vh;
+    width: 100%;
+}
+
+.about img {
+    width: 280px;
+    height: 300px;
+    object-fit: cover;
+    filter: drop-shadow(0 0 12px peru);
+
+}
+
+.about h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.about p {
+    font-size: 1.1rem;
+    text-align: justify;
+    line-height: 1.7;
+    max-width: 550px;
+}
+
+/* Section Skills */
+.skills {
+    padding: 25vh;
+    text-align: center;
+    color: black;
+    font-family: "Poppins", sans-serif;
+}
+
+.skills h2 {
+    font-size: 2.8rem;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.skills h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: rgb(231, 203, 149); 
+    margin: 15px auto 0;
+    border-radius: 10px;
+}
+
+/* Container grid untuk kartu */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Card skill */
+.skill-card {
+    width: 230px;
+    background: rgb(231, 203, 149); 
+    padding: 35px 20px;
+    border-radius: 18px;
+    box-shadow: 0 0 20px peru;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Hover efek glowing */
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px peru;
+}
+
+/* Icon / gambar */
+.skill-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+/* Text */
+.skill-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    font-size: 0.9rem;
+    opacity: 0.75;
+}
+
+.experience {
+    padding: 15vh 15px; 
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.experience h2 {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px; 
+    background-color: transparent; 
+    padding: 0;
+}
+
+.experience > div:nth-child(n+2) {
+    background-color: rgb(231, 203, 149);    
+    padding: 25px; 
+    border-radius: 8px; 
+    margin-bottom: 25px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.experience h3 {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.experience p {
+    font-size: 1em;
+    color: #555;
+    margin-top: 0; 
+    margin-bottom: 3px; 
+}
+
+.experience ul {
+    list-style-type: disc;
+    margin-top: 15px;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+.experience ul li {
+    font-size: 0.95em;
+    color: #444;
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+/* PROJECT SECTION  */
+.projects {
+    padding: 150px 20px;
+}
+
+.projects-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 50px;
+}
+
+/* Grid layout */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    justify-content: center;
+}
+
+/* Card */
+.project-card {
+    background: rgb(231, 203, 149);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* Image */
+.project-card img {
+    width: 300px ;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Title */
+.project-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+/* Description */
+.project-card p {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* CONTACT SECTION */
+.contact {
+    padding: 100px 0;
+    font-family: "Poppins", sans-serif;
+    color: black;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.contact h2::after {
+    content: "";
+    width: 70px;
+    height: 3px;
+    background:  rgb(231, 203, 149); 
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 10px;
+}
+
+/* FORM STYLE */
+.contact form {
+    width: 750px;              
+    min-height: 260px;        
+    background: #f2d7a0;       
+    padding: 30px 40px;        
+    margin: auto;
+    border-radius: 18px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, .15);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;                
+    text-align: left;
+}
+
+
+/* LABEL */
+.contact form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+/* INPUT & TEXTAREA */
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 14px;
+    background:  rgb(231, 203, 149);
+    border: 1px solid peru;
+    border-radius: 10px;
+    color: black;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+    font-size: 0.95rem;
+}
+
+/* Fokus input */
+.contact form input:focus,
+.contact form textarea:focus {
+    border-color:  peru;
+    box-shadow: 0 0 8px  rgb(201, 181, 143);
+    outline: none;
+}
+
+/* BUTTON */
+.contact form button {
+    width: 100%;
+    padding: 14px;
+    background: peru;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover Button efek glowing */
+.contact form button:hover {
+    background:  rgb(231, 203, 149);
+    box-shadow: 0 0 15px peru;
+    transform: translateY(-2px);
+}
+
+/* FOOTER */
+.footer {
+    background: rgb(231, 203, 149);
+    padding: 60px 0;
+    text-align: center;
+    color: peru;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Container agar semua terpusat */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Social icon row */
+.social-icons {
+    display: flex;
+    gap: 35px;
+}
+
+/* Circle icon style */
+.social-icons a {
+    width: 65px;
+    height: 65px;
+    border: 2px solid peru;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease;
+    backdrop-filter: blur(8px);
+}
+
+/* Icon inside */
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(95%);
+}
+
+/* Hover glowing */
+.social-icons a:hover {
+    border-color: peru;
+    box-shadow: 0 0 12px peru;
+    transform: translateY(-4px);
+}
+
+/* COPYRIGHT */
+.copy {
+    font-size: 1rem;
+    opacity: .7;
+}
+
+/*  RESPONSIVE SETTINGS */
+
+/* Untuk layar tablet (max-width 992px) */
+@media (max-width: 992px) {
+    header {
+        padding: 20px 4%;
+    }
+
+    .hero, .about, .skills, .experience, .projects, .contact {
+        padding: 80px 5%;
+    }
+
+    .hero > div, 
+    .about > div {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-img img,
+    .about img {
+        width: 250px;
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .contact form {
+        width: 90%;
+    }
+}
+
+
+/* Untuk layar HP (max-width 600px) */
+@media (max-width: 600px) {
+
+    body {
+        padding-top: 70px;
+        overflow-x: hidden;
+    }
+
+    header h2 {
+        font-size: 1.4rem;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    /* HERO TEXT */
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .hero-text h2 {
+        font-size: 1.3rem;
+    }
+    .hero-text p {
+        font-size: 0.95rem;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    /* ABOUT */
+    .about img {
+        width: 200px;
+        height: auto;
+    }
+
+    /* SKILLS */
+    .skills {
+        padding: 100px 20px;
+    }
+    .skill-card {
+        width: 95%;
+    }
+
+    /* EXPERIENCE */
+    .experience > div:nth-child(n+2) {
+        padding: 15px;
+    }
+
+    /* CONTACT FORM */
+    .contact form {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .contact form input,
+    .contact form textarea {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+
+    /* FOOTER */
+    .social-icons {
+        gap: 18px;
+    }
+    .social-icons a {
+        width: 50px;
+        height: 50px;
+    }
+    .social-icons a img {
+        width: 22px;
+    }
+    .copy {
+        font-size: .8rem;
+    }
+}
